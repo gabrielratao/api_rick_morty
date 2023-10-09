@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora WEB</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+    
+
+    <!--teclado-->
+    <section class="main-section">
+
+        <div class="calculator">
+            <!--RESULTADO-->
+            <input type="text" class="result-number" id="total-result" placeholder="RESULTADO" style="font-size:xx-large;">
+            
+
+            <div class="line">
+
+                <div class="button-space">
+                    <button class="clear-all__button" id="clear-numbers" onclick="clearAll(); removeAlert()">CE</button>
+                </div>
+
+                <div class="button-space">
+                    <button class="operation_button" id="delete-number" style="background-color: #201f1f; cursor: default;"></button>
+                </div>
+
+                <div class="button-space">
+                    <input type="button" class="operation_button" id="calculate-percentage" style="background-color: #201f1f; cursor: default;">
+                </div>
+
+                <div class="button-space">
+                    <input class="operation_button" id="number" type="button" value="/"
+                    onclick="showDisplayValue('/')">
+                </div>
+                
+            </div>
+
+            <div class="line"> 
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="7" onclick="showDisplayValue('7')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="8" onclick="showDisplayValue('8')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="9" onclick="showDisplayValue('9')">
+                </div>
+
+                <div class="button-space">
+                    <input class="operation_button" id="number" type="button" value="*"
+                    onclick="showDisplayValue('*')">
+                </div>
+
+            </div>
+
+            <div class="line">
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="4" onclick="showDisplayValue('4')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="5" onclick="showDisplayValue('5')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="6" onclick="showDisplayValue('6')"> 
+                </div>
+
+                <div class="button-space"> 
+                    <input class="operation_button" id="number" type="button" value="-"
+                    onclick="showDisplayValue('-')">
+                </div>
+
+            </div>
+
+            <div class="line">
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="1" onclick="showDisplayValue('1')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="2" onclick="showDisplayValue('2')">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="3" onclick="showDisplayValue('3')">
+                </div>
+
+                <div class="button-space">
+                    <input class="operation_button" id="number" type="button" value="+"
+                    onclick="showDisplayValue('+')">
+                </div>
+
+            </div>
+
+            <div class="line">
+
+                <div class="button-space">
+                    <input class="operation_button" id="number" type="button" style="background-color: #201f1f; cursor: default;">
+                </div>
+
+                <div class="button-space">
+                    <input class="number-button" id="number" type="button" value="0" onclick="showDisplayValue('0')">
+                </div>
+
+                <div class="button-space">
+                    <input type="button" class="operation_button" id="add-comma" style="background-color: #201f1f; cursor: default;">
+                </div>
+
+                <div class="button-space">
+                    <!-- <button class="equal__button" id="calculate-result">=</button> -->
+                    <input type="button" class="equal__button" id="calculate-result" value="=" onclick="getResult(); getCharacter()">
+
+                </div>
+
+            </div>
+
+
+        </div>
+        
+
+
+        <div class="rick-morty-container" id="rick-morty-container">
+
+            <div class="rick-morty-description">
+                <h2>Rick And Morty</h2>
+                <p>O resultado do seu cáclulo irá retornar um personagem da série e suas caracteristicas</p>
+
+                <img src="../assets/image-rick.jpeg" alt="" class="rick-morty-img" id="rick-morty-img">
+            </div>
+
+            <div class="table-section">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Personagem</th>
+                            <th>Status</th>
+                            <th>Espécie</th>
+                            <th>Origem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="characteristics"></tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    
+    <script src="./script.js"></script>
+</body>
+</html>
