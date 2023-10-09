@@ -46,7 +46,7 @@ function getCharacter() {
             removeAlert()
         },
         error: function(){
-            changeImage('../assets/image-rick.jpeg')
+            changeImage('./assets/image-rick.jpeg')
             addAlert()
             
         }
