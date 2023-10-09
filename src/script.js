@@ -1,9 +1,6 @@
-
-
-
-
 var resultValue = 1
 
+//mostrar os valores no display
 function showDisplayValue(number) {
     document.getElementById('total-result').value += number
     display = document.getElementById('total-result')
@@ -21,6 +18,7 @@ function getResult(){
     }
 }
 
+//eliminar o paragrafo de aviso
 function clearAll(){
     document.getElementById('total-result').value = ''
     removeAlert()
@@ -28,7 +26,7 @@ function clearAll(){
 
 
 
-
+// request na API
 function getCharacter() {
     $("#characteristics").empty();
     $.ajax({
@@ -100,7 +98,7 @@ function addAlert(){
     var alertParaph = document.createElement("p")
     alertParaph.innerHTML = 'Aparentemente esse personagem não existe.<br> Clique em CE para calcular novamente'
     alertParaph.id = 'alert-paraph'
-    var elementoPai = document.getElementById("rick-morty-container"); // Substitua "elementoPai" pelo ID do elemento ao qual você deseja adicionar o parágrafo.
+    var elementoPai = document.getElementById("rick-morty-container"); 
     
     
     elementoPai.appendChild(alertParaph);
