@@ -46,7 +46,7 @@ function getCharacter() {
             removeAlert()
         },
         error: function(){
-            changeImage('./assets/image-rick.jpeg')
+            changeImage("./assets/image-rick.jpeg")
             addAlert()
             
         }
@@ -59,7 +59,7 @@ function getCharacter() {
 function changeImage(img){
     var image = document.getElementById('rick-morty-img')
     image.src = img
-    image.alt = "Imgaem Personagem"
+    image.alt = "Imagem Personagem"
     
 }
 
