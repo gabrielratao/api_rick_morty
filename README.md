@@ -38,7 +38,7 @@ API utilizada: [The Rick and Morty API](https://rickandmortyapi.com/)
 
 O *endpoint* consumido foi: /api/character/:id
 
-O resultado do cálculo da calculadora é utilizado como parâmetro "id" no REQUEST do serviço da API. A função que realiza o consumo da API utiliza o pacote jQuery.
+O resultado do cálculo da calculadora é utilizado como parâmetro "id" no método GET do serviço da API. A função que realiza o consumo da API utiliza o pacote jQuery.
 
 Ao fazer o REQUEST há um tratamento para eventuais erros que possam ocorrer. Se houver um erro será adicionado um parágrafo avisando que o personagem não existe e a sua imagem retornará para a imagem inicial. 
 
