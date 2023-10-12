@@ -14,6 +14,7 @@ body {
     justify-content: space-around;
     
     
+    
     margin-top: 5vh;
     height: 94vh;
 }
@@ -23,6 +24,8 @@ body {
     background-color: #201f1f;
     border-radius: 2%;
     height: 520px;
+    width: 420px;
+    
     
 }
 

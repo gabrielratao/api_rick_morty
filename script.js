@@ -113,3 +113,45 @@ function removeAlert() {
       console.error("Parágrafo não encontrado!");
     }
   }
+
+// função para ajustar layout da tela
+function verificarLarguraDaTela() {
+    const larguraDaTela = window.innerWidth;
+    console.log(`Largura da tela: ${larguraDaTela}px`);
+    
+    
+
+    if (larguraDaTela <= 900){ //dispositivo móvel
+        console.log('Dispositivo Móvel')
+        alert('Esse sistema ainda não está 100% disponível em Mobile. Reduza o Zoom para utilizar')
+        var mainSection = document.getElementById('main-section')
+        var rickMorty = document.getElementById('rick-morty-container')
+
+
+        mainSection.style.flexDirection = 'column'
+        mainSection.style.height = '180vh'
+        mainSection.style.marginLeft = '10px'
+
+        rickMorty.style.width = '440px'
+        rickMorty.style.height = '70vh'
+        
+
+        
+    } 
+    else {
+      
+        console.log('Tela não é de dispositivo móvel!');
+        
+        mainSection.style.flexDirection = 'row'
+        mainSection.style.height = '94vh'
+        mainSection.style.marginLeft = 'none'
+
+        rickMorty.style.height = '85vw'
+        rickMorty.style.width = '40vw'
+    }
+  
+
+}
+  
+  // verificar o tamanho da tela do usuário assim que a página é carregada
+  window.addEventListener('load', verificarLarguraDaTela);
