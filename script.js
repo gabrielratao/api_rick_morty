@@ -117,12 +117,12 @@ function removeAlert() {
 // função para ajustar layout da tela
 function verificarLarguraDaTela() {
     const larguraDaTela = window.innerWidth;
-    console.log(`Largura da tela: ${larguraDaTela}px`);
+    // console.log(`Largura da tela: ${larguraDaTela}px`);
     
     
 
     if (larguraDaTela <= 900){ //dispositivo móvel
-        console.log('Dispositivo Móvel')
+        // console.log('Dispositivo Móvel')
         alert('Esse sistema ainda não está 100% disponível em Mobile. Reduza o Zoom para utilizar')
         var mainSection = document.getElementById('main-section')
         var rickMorty = document.getElementById('rick-morty-container')
@@ -140,7 +140,7 @@ function verificarLarguraDaTela() {
     } 
     else {
       
-        console.log('Tela não é de dispositivo móvel!');
+        // console.log('Não móvel');
         
         mainSection.style.flexDirection = 'row'
         mainSection.style.height = '94vh'
