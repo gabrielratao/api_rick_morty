@@ -123,7 +123,7 @@ function verificarLarguraDaTela() {
 
     if (larguraDaTela <= 900){ //dispositivo móvel
         // console.log('Dispositivo Móvel')
-        alert('Esse sistema ainda não está 100% disponível em Mobile. Reduza o Zoom para utilizar. Role para baixo para ver o resultado!')
+        alert('Esse sistema ainda não está 100% disponível em Mobile. Reduza o Zoom para utilizar. Role para baixo para ver o resultado da API!')
         var mainSection = document.getElementById('main-section')
         var rickMorty = document.getElementById('rick-morty-container')
 
